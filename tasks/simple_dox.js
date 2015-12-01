@@ -18,7 +18,6 @@ module.exports = function(grunt) {
     var options = this.options({ separator: grunt.util.linefeed }),
         dox = require('dox'),
         util = require('util'),
-        done = this.async(),
         doc = function (file) {
           var buf = grunt.file.read(file),
               obj = dox.parseComments(buf, {
